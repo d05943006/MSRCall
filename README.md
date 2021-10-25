@@ -26,7 +26,7 @@ minimap2
 
 ### Preprocess test data
     bash ./run_0_preprocee_testsets.sh
-The preprocessed .npy files are put in the `preprocess_test directory.
+The preprocessed .npy files are put in the `preprocess_test` directory.
 ### Run basecalling
 ```angular2
 python call.py -model exp_backup/MSRCall/MSRCall.chkpt -records_dir preprocessed_test/Acinetobacter_pittii_16_377_0801/ -output MSRCall_out
@@ -37,19 +37,19 @@ Basecalled results are stored in the `MSRCall_out` folder.
     Wick, R. R., Judd, L. M., & Holt, K. E. (2019). Performance of neural network basecalling tools for Oxford Nanopore sequencing. Genome biology, 20(1), 1-10.
 
 ## Logs
-docker run --gpus all --name=SACall -it -v /home/d05006/research/2019_0705_deepnano/:/workspace/2019_0705_deepnano/ pytorch/pytorch:1.1.0-cuda10.0-cudnn7.5-devel bash
-docker start SACall
-docker exec -it SACall bash
-pip install python-Levenshtein
-pip install einops
-pip install statsmodels
-pip install h5py
-cd ctcdecode/
-pip install .
-cd ..
-conda create --name SACall
-source activate SACall
-conda install -c bioconda minimap2
-conda install -c bioconda mummer
-apt update
-apt install vim
+docker run --gpus all --name=SACall -it -v /home/d05006/research/2019_0705_deepnano/:/workspace/2019_0705_deepnano/ pytorch/pytorch:1.1.0-cuda10.0-cudnn7.5-devel bash  
+docker start SACall  
+docker exec -it SACall bash  
+pip install python-Levenshtein  
+pip install einops  
+pip install statsmodels  
+pip install h5py  
+cd ctcdecode/  
+pip install .  
+cd ..  
+conda create --name SACall  
+source activate SACall  
+conda install -c bioconda minimap2  
+conda install -c bioconda mummer  
+apt update  
+apt install vim  
