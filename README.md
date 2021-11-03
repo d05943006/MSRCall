@@ -1,5 +1,5 @@
 #  MSRCall
-Explore Multi-scale Deep Structure for Basecalling Oxford Nanopore Sequences.
+MSRCall: A Multi-scale Deep Neural Network for Basecalling Oxford Nanopore Sequences.
 
 ## Preparation
 
