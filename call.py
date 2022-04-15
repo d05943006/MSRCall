@@ -1,10 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # @Filename: call.py
-# @Date    : 05/07/2019
-# @Author  : Neng Huang
-# @Email   : csuhuangneng@gmail.com
-
+# @Date    : 05/07/2019 (base version)
+# @Author  : Neng Huang (base version)
+# @Email   : csuhuangneng@gmail.com (base version)
+# @Date    : 01/01/2022
+# @Author  : Yang-Ming Yeh
+# @Email   : d05943006@ntu.edu.tw
 
 import argparse
 from generate_dataset.trim_raw import trim_and_segment_raw
@@ -24,6 +26,7 @@ from multiprocessing import Process, Manager
 import time
 from ResNetModule import ResidualBlock
 from exp_backup.MSRCall.scripts.adam_ctc_train import simpleRNN
+# from exp_backup.trial_01.scripts.MSRCall_train import simpleRNN
 
 
 read_id_list, log_probs_list, output_lengths_list, row_num_list = [], [], [], []
@@ -192,12 +195,10 @@ def main():
         call_model_2 = simpleRNN(1, 256).to(argv.device)
         call_model_2.load_state_dict(call_model.module.state_dict())
         call_model = call_model_2
-    
-    ## if want to call with github model (use model.chkpt)
-    # call_model = Call(argv).to(device) # 7.7
 
     encode(call_model, argv)
 
 
 if __name__ == "__main__":
     main()
+

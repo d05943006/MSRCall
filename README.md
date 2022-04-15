@@ -8,18 +8,13 @@ You can put your own test reads in fast5 format in the `dataset` folder and modi
 In our paper, we used dataset from Ryan Wick et. al. that can be downloaded from this website:
 https://doi.org/10.26180/5c5a5fa08bbee
 ### Required packages
+Please install ctcdecode from:
 ctcdecode: https://github.com/parlance/ctcdecode.git  
-torch==1.2.0  
-torchvision==0.2.2  
-Pillow==6.0  
-numpy  
-pip  
-statsmodels  
-python-Levenshtein  
-einops  
-statsmodels  
-h5py  
-mummer  
+Install required python packages:
+```angular2
+pip install -r requirement.txt
+```
+optional software:
 minimap2  
 
 ## Run
