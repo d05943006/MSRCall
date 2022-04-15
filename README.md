@@ -8,8 +8,10 @@ You can put your own test reads in fast5 format in the `dataset` folder and modi
 In our paper, we used dataset from Ryan Wick et. al. that can be downloaded from this website:
 https://doi.org/10.26180/5c5a5fa08bbee
 ### Required packages
+Our code is tested on cuda 10.0, cudnn 7.6
+
 Please install ctcdecode from:
-ctcdecode: https://github.com/parlance/ctcdecode.git  
+https://github.com/parlance/ctcdecode.git  
 Install required python packages:
 ```angular2
 pip install -r requirement.txt
