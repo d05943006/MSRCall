@@ -1,6 +1,7 @@
 #  MSRCall
-MSRCall: A Multi-scale Deep Neural Network for Basecalling Oxford Nanopore Sequences.
+[MSRCall: A Multi-scale Deep Neural Network for Basecalling Oxford Nanopore Sequences](https://doi.org/10.1093/bioinformatics/btac435)
 
+Yang-Ming Yeh and Yi-Chang Lu
 ## Preparation
 
 ### Data folder
@@ -30,5 +31,16 @@ python call.py -model exp_backup/MSRCall/MSRCall.chkpt -records_dir preprocessed
 ```
 You can change the test data by replacing `Acinetobacter_pittii_16_377_0801` with your own filename.  
 Basecalled results are stored in the `MSRCall_out` folder.
-## Dataset reference:
+
+## Train
+
+### Reproduction
+You can reproduce the training process by:
+```angular2
+python MSRCall_train.py -save_model ${modelName} -as ${train_set_dir}/signals/ -al ${train_set_dir}/labels/ -es ${val_set_dir}/signals/ -el ${val_set_dir}/labels/
+```
+As for the training/validation set generation, we follow the same procedures used in SACall.
+Please refer to [scripts for training set in SACall](https://github.com/huangnengCSU/SACall-basecaller/blob/master/scripts/KP_generate_dataset.sh) and  [scripts for validation set in SACall](https://github.com/huangnengCSU/SACall-basecaller/blob/master/scripts/KP_generate_validation_dataset.sh).
+## References:
     Wick, R. R., Judd, L. M., & Holt, K. E. (2019). Performance of neural network basecalling tools for Oxford Nanopore sequencing. Genome biology, 20(1), 1-10.
+    Huang, N., Nie, F., Ni, P., Luo, F., & Wang, J. (2022). SACall: A Neural Network Basecaller for Oxford Nanopore Sequencing Data Based on Self-Attention Mechanism. IEEE/ACM transactions on computational biology and bioinformatics, 19(1), 614–623.
