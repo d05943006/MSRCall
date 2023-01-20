@@ -1,5 +1,5 @@
 #  MSRCall
-[MSRCall: A Multi-scale Deep Neural Network for Basecalling Oxford Nanopore Sequences](https://doi.org/10.1093/bioinformatics/btac435)
+[MSRCall: A Multi-scale Deep Neural Network to Basecall Oxford Nanopore Sequences](https://doi.org/10.1093/bioinformatics/btac435)
 
 Yang-Ming Yeh and Yi-Chang Lu
 ## Preparation
